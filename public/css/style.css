@@ -1,0 +1,157 @@
+/* public/css/style.css */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.panel {
+  padding: 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.panel:last-child {
+  border-bottom: none;
+}
+
+.panel h2 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 10px;
+}
+
+.row {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+.btn {
+  background: #667eea;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #5a67d8;
+}
+
+.btn.primary {
+  background: #48bb78;
+}
+
+.btn.primary:hover {
+  background: #38a169;
+}
+
+.btn.danger {
+  background: #f56565;
+  padding: 8px 15px;
+  font-size: 14px;
+}
+
+.btn.danger:hover {
+  background: #e53e3e;
+}
+
+.msg {
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.msg.success {
+  background: #c6f6d5;
+  color: #22543d;
+  border: 1px solid #9ae6b4;
+}
+
+.msg.error {
+  background: #fed7d7;
+  color: #742a2a;
+  border: 1px solid #fc8181;
+}
+
+.profile-info {
+  background: #f7fafc;
+  padding: 20px;
+  border-radius: 5px;
+  border-left: 4px solid #667eea;
+}
+
+.profile-info p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.profile-info strong {
+  color: #2d3748;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 10px;
+  }
+  
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .user-info {
+    margin-top: 10px;
+  }
+}
+
