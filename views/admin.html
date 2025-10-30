@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Admin Portal | Auth App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="/css/portal.css" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-brand">
+        <div class="mini-logo">🔒</div>
+        <span>Auth Admin</span>
+      </div>
+
+      <nav class="menu">
+        <button data-route="overview" class="menu-item active">
+          <span>Overview</span>
+        </button>
+        <button data-route="users" class="menu-item">
+          <span>User Management</span>
+        </button>
+        <button data-route="analytics" class="menu-item">
+          <span>Analytics</span>
+        </button>
+        <button data-route="settings" class="menu-item">
+          <span>Settings</span>
+        </button>
+      </nav>
+
+      <div class="side-footer">
+        <small>© <span id="year"></span> Auth App</small>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn" id="toggle-sidebar" aria-label="Toggle sidebar">☰</button>
+        <div class="grow"></div>
+        <div class="user-chip" id="user-chip">Loading...</div>
+        <a class="btn small" href="/logout">Logout</a>
+      </header>
+
+      <main id="content" class="content">
+        <!-- Content swapped by client router -->
+      </main>
+
+      <footer class="footer">
+        <span>Built with ❤️ by swarnim </span>
+      </footer>
+    </div>
+  </div>
+
+  <!-- modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <header class="modal-head">
+        <h3 id="modal-title">Add User</h3>
+        <button class="icon-btn" data-close="true">✕</button>
+      </header>
+      <div class="modal-body" id="modal-body"></div>
+      <footer class="modal-foot" id="modal-foot"></footer>
+    </div>
+  </div>
+
+  <script src="/js/portal.js" defer></script>
+</body>
+</html>
+
