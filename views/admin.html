@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Admin - User Management</title>
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Admin Dashboard</h1>
+      <div class="actions">
+        <a class="btn" href="/logout">Logout</a>
+      </div>
+    </header>
+
+    <section class="panel">
+      <h2>Users</h2>
+      <div id="users-wrap">
+        <table id="users-table">
+          <thead>
+            <tr><th>ID</th><th>Username</th><th>Email</th><th>Role</th><th>Actions</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Add User</h2>
+      <form id="add-user-form">
+        <div class="row">
+          <input type="text" name="username" placeholder="Username" required />
+          <input type="email" name="email" placeholder="Email" required />
+        </div>
+        <div class="row">
+          <input type="password" name="password" placeholder="Password" required />
+          <select name="role">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+        <div class="row">
+          <button type="submit" class="btn primary">Add user</button>
+        </div>
+        <div id="add-user-msg" class="msg"></div>
+      </form>
+    </section>
+
+    <!-- Session timeout indicator -->
+    <div id="session-status" style="position: fixed; bottom: 10px; right: 10px; background: #333; color: white; padding: 5px 10px; border-radius: 5px; font-size: 12px; display: none;">
+      Session active
+    </div>
+  </div>
+
+  <script src="/js/admin.js" defer></script>
+  <script src="/js/auto-logout.js" defer></script>
+</body>
+</html>
+
