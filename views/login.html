@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Login | Auth App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="/css/auth.css" rel="stylesheet">
+</head>
+<body class="auth-body">
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <div class="brand">
+        <div class="logo">🔐</div>
+        <h1>Auth App</h1>
+        <p>Secure access to your dashboard</p>
+      </div>
+
+      <form id="login-form" novalidate>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          <small class="error" id="email-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="password-wrap">
+            <input id="password" name="password" type="password" placeholder="••••••••" required />
+            <button class="toggle-pass" type="button" aria-label="Show password" title="Show/Hide">👁️</button>
+          </div>
+          <small class="error" id="password-error"></small>
+        </div>
+
+        <button type="submit" class="btn primary full">Sign in</button>
+        <div class="inline-feedback" id="login-feedback" role="alert" aria-live="polite"></div>
+
+        <div class="help-row">
+          <label class="remember">
+            <input type="checkbox" id="remember-me" /> Remember me
+          </label>
+          <a class="link" href="#" id="forgot-link">Forgot password?</a>
+        </div>
+      </form>
+
+      <div class="divider"><span>New here?</span></div>
+      <a class="btn ghost full" href="/signup">Create an account</a>
+    </div>
+
+    <footer class="auth-footer">
+      <span>© <span id="year"></span> Auth App</span>
+      <a class="link" href="#">Privacy</a>
+      <a class="link" href="#">Terms</a>
+      <a class="link" href="#">Support</a>
+    </footer>
+  </div>
+
+  <script src="/js/login.js" defer></script>
+</body>
+</html>
+
